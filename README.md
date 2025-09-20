@@ -3,9 +3,10 @@
 A new Flutter project.
 
 # Setup Instructions
-clone repo 
-Install dependencies
-run the app 
+Install dependencies using `flutter pub get`
+Run the app using `flutter run`
+I created a new repository on GitHub, then initialized Git in my project, made the first commit, and pushed the code to the repository.  
+Now the project is available publicly on GitHub.
 
 # API Endpoints
 GET https://fakestoreapi.com/products fetch products
