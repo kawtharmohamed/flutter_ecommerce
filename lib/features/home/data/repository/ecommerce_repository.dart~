@@ -1,0 +1,29 @@
+import 'package:e_commerce_app/core/networking/api_services.dart';
+
+import '../../../../core/networking/api_result.dart';
+import '../../../../core/networking/error_handler.dart';
+import '../model/product_model.dart';
+
+class EcommerceRepository {
+  final ApiServices apiServices;
+
+  EcommerceRepository(this.apiServices);
+
+  Future<ApiResult<List<String>>> getCategories() async {
+    try {
+      final response = await apiServices.getCategories();
+      return Success(response);
+    } catch (error) {
+      return Failure(ErrorHandler.handle(error));
+    }
+  }
+
+  Future<ApiResult<List<ProductModel>>> getProducts() async {
+    try {
+      final response = await apiServices.getProducts();
+      return Success(response);
+    } catch (error) {
+      return Failure(ErrorHandler.handle(error));
+    }
+  }
+}

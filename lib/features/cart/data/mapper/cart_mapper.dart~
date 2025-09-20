@@ -1,0 +1,26 @@
+import '../../domain/entity/cart_entity.dart';
+import '../model/cart_model.dart';
+
+class CartMapper {
+  static CartEntity toEntity(CartModel model) {
+    return CartEntity(
+      id: model.id,
+      productId: model.productId,
+      name: model.name,
+      image: model.image,
+      price: model.price,
+      quantity: model.quantity,
+    );
+  }
+
+  static CartModel toModel(CartEntity entity) {
+    return CartModel(
+      id: entity.id,
+      productId: entity.productId,
+      name: entity.name,
+      image: entity.image,
+      price: entity.price,
+      quantity: entity.quantity,
+    );
+  }
+}
